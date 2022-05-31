@@ -5537,8 +5537,7 @@ if(UI.helpURL === '') {
 }
 
 const nav_style_colors = {
-  "red": {"background-color": "#FF5252", "color": "#FFF"},
-  "deep-red": {"background-color": "#831B1B", "color": "#FFF"},
+  "red": {"background-color": "#932020", "color": "#FFF"},
   "pink": {"background-color": "#FF4081", "color": "#FFF"},
   "purple": {"background-color": "#E040FB", "color": "#FFF"},
   "deep-purple": {"background-color": "#7C4DFF", "color": "#FFF"},
