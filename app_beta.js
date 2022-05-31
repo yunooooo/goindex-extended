@@ -5516,7 +5516,7 @@ document.write(
   '<script src="//cdn.jsdelivr.net/npm/marked@4.0.0/marked.min.js"></script>'
 );
 document.write(
-  "<style>.mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}.mdui-toolbar>i{opacity:.5}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.active,a.mdui-typo-headline{opacity:1}.mdui-container{max-width:980px}.mdui-list-item{transition:none}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:3pc}.mdui-list-item{margin:2px 0;padding:0}.mdui-toolbar>a:last-child{opacity:1; color: #000}@media screen and (max-width:980px){.mdui-list-item .mdui-text-right{display:none}.mdui-container{width:100%!important;margin:0}}</style>"
+  "<style>.mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}.mdui-toolbar>i{opacity:.5}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.active,a.mdui-typo-headline{opacity:1}.mdui-container{max-width:1120px}.mdui-list-item{transition:none}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:3pc}.mdui-list-item{margin:2px 0;padding:0}.mdui-toolbar>a:last-child{opacity:1; color: #000}@media screen and (max-width:1120px){.mdui-list-item .mdui-text-right{display:none}.mdui-container{width:100%!important;margin:0}}</style>"
 );
 if (UI.dark_mode) {
   document.write(
@@ -5538,6 +5538,7 @@ if(UI.helpURL === '') {
 
 const nav_style_colors = {
   "red": {"background-color": "#FF5252", "color": "#FFF"},
+  "deep-red": {"background-color": "#831B1B", "color": "#FFF"},
   "pink": {"background-color": "#FF4081", "color": "#FFF"},
   "purple": {"background-color": "#E040FB", "color": "#FFF"},
   "deep-purple": {"background-color": "#7C4DFF", "color": "#FFF"},
@@ -5560,7 +5561,7 @@ document.write(
   );
 
 document.write(
-  "<style>.dummyclass3{max-width: 570px}@media screen and (max-width:980px){.dummyclass3{display:none}}</style>"
+  "<style>.dummyclass3{max-width: 570px}@media screen and (max-width:1120px){.dummyclass3{display:none}}</style>"
 );
 
 function init() {
