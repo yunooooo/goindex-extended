@@ -6249,15 +6249,16 @@ function file_video(path) {
   const url = window.location.origin + path;
   var file_name = decodeURIComponent(path.trim("/").split("/").slice(-1)[0].replaceAll("%5C%5C", "%5C"));
   let player_items = [
-    {
+    /* {
       text: "MXPlayer(Free)",
       href: `intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end`,
     },
     {
       text: "MXPlayer(Pro)",
       href: `intent:${url}#Intent;package=com.mxtech.videoplayer.pro;S.title=${path};end`,
-    },
+    }, */ 
     { text: "nPlayer", href: `nplayer-${url}` },
+    { text: "MPC-HC", href: `mpchc://${url}` },
     { text: "VLC", href: `vlc://${url}` },
     { text: "PotPlayer", href: `potplayer://${url}` },
   ]
@@ -6299,27 +6300,14 @@ function file_video(path) {
     container: document.getElementById("dplayer"),
     loop: false,
     screenshot: false,
-    preload: 'auto',
-    hotkey: true,
+    preload: "auto",
+    mutex: true,
     volume: 0.5,
     video: {
       quality: [{ url: url, type: "auto" }],
       autoplay: false,
       defaultQuality: 0,
     },
-    contextmenu: [
-        {
-            text: 'yunooooo on GitHub',
-            link: 'https://github.com/yunooooo',
-        },
-        {
-            text: 'Reload Player',
-            click: (player) => {
-                document.getElementById("dplayer").load();
-            },
-        },
-    ],
-    mutex: true,
   });
 }
 function file_audio(path) {
