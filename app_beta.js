@@ -6249,17 +6249,17 @@ function file_video(path) {
   const url = window.location.origin + path;
   var file_name = decodeURIComponent(path.trim("/").split("/").slice(-1)[0].replaceAll("%5C%5C", "%5C"));
   let player_items = [
-    /* {
+    {
       text: "MXPlayer(Free)",
       href: `intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end`,
     },
     {
       text: "MXPlayer(Pro)",
       href: `intent:${url}#Intent;package=com.mxtech.videoplayer.pro;S.title=${path};end`,
-    }, */ 
+    },
     { text: "nPlayer", href: `nplayer-${url}` },
-    { text: "MPC-HC", href: `mpchc://${url}` },
     { text: "VLC", href: `vlc://${url}` },
+    { text: "MPC", href: `mpchc://${url}` },
     { text: "PotPlayer", href: `potplayer://${url}` },
   ]
     .map(
@@ -6300,14 +6300,14 @@ function file_video(path) {
     container: document.getElementById("dplayer"),
     loop: false,
     screenshot: false,
-    preload: "auto",
-    mutex: true,
+    preload: 'auto',
     volume: 0.5,
     video: {
       quality: [{ url: url, type: "auto" }],
       autoplay: false,
       defaultQuality: 0,
     },
+    mutex: true,
   });
 }
 function file_audio(path) {
