@@ -6298,13 +6298,28 @@ function file_video(path) {
   const dp = new DPlayer({
     container: document.getElementById("dplayer"),
     loop: false,
-    screenshot: true,
-    preload: "auto",
+    screenshot: false,
+    preload: 'auto',
+    hotkey: true,
+    volume: 0.5,
     video: {
-      quality: [{ url: url, type: "normal" }],
-      autoplay: true,
+      quality: [{ url: url, type: "auto" }],
+      autoplay: false,
       defaultQuality: 0,
     },
+    contextmenu: [
+        {
+            text: 'yunooooo on GitHub',
+            link: 'https://github.com/yunooooo',
+        },
+        {
+            text: 'Reload Player',
+            click: (player) => {
+                document.getElementById("dplayer").load();
+            },
+        },
+    ],
+    mutex: true,
   });
 }
 function file_audio(path) {
